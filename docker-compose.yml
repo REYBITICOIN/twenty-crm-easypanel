@@ -9,6 +9,10 @@ services:
       NODE_PORT: 3000
       PG_DATABASE_URL: postgres://postgres:postgres@db:5432/default
       REDIS_URL: redis://redis:6379
+      SERVER_URL: https://crm-toca.wlonik.easypanel.host
+      ENCRYPTION_KEY: fnVMy1hkSIlHh038U5GZGI+VFcA4tTeZeTw8fUZdqzw=
+      APP_SECRET: 3dVJitoC9XFdktef1+3V/TNOE1J+1aBY
+      STORAGE_TYPE: local
     depends_on:
       db: { condition: service_healthy }
       redis: { condition: service_healthy }
@@ -27,6 +31,10 @@ services:
     environment:
       PG_DATABASE_URL: postgres://postgres:postgres@db:5432/default
       REDIS_URL: redis://redis:6379
+      SERVER_URL: https://crm-toca.wlonik.easypanel.host
+      ENCRYPTION_KEY: fnVMy1hkSIlHh038U5GZGI+VFcA4tTeZeTw8fUZdqzw=
+      APP_SECRET: 3dVJitoC9XFdktef1+3V/TNOE1J+1aBY
+      STORAGE_TYPE: local
       DISABLE_DB_MIGRATIONS: "true"
       DISABLE_CRON_JOBS_REGISTRATION: "true"
     depends_on:
